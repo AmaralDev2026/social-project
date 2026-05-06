@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+* {             /* configuração geral de todo conteúdo */
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {  /* COMANDO PARA RETIRADA DA BARRA DE ROLAGEM DA LATERAL E DA BASE */
+    width: 0px;
+    height: 0px;
+}
+
+html, body {        /* configuração do html e do corpo da página */
+    height: 100vh; /* medida de ALTURA em "vh" significa = Viewport Height (Altura da Viewport) */
+    width: 100vw;  /* medida de LARGURA em "vW" significa = Viewport Width (Largura da Viewport) */
+    background-color: black;
+}
+
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {               /* esses valores configuram o conteúdo principal o "main", LEMBRANDO QUE O "POSITION" AQUI SEMPRE "RELATIVE" */
+    position: relative;
+     height: 100vh;  /* medida de ALTURA em "vh" significa = Viewport Height (Altura da Viewport) */
+}
+
+section#telefone {  /* esses valores configuram o conteúdo da "section#telefone", LEMBRANDO QUE O "POSITION" AQUI SEMPRE "ABSOLUTE" */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* esse valor é para centralizar o background-color ao centro da tela */
+
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 267px;
+    height: 471px;
+}
+
+section#redes-sociais {
+    text-align: right;
+    padding-right: 40px;
+}
+
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+    transition: transform .3s, border 1s;
+}
